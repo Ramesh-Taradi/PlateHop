@@ -18,7 +18,7 @@
                     com.project.platehop.service.RestaurantService rs = ctx.getBean(com.project.platehop.service.RestaurantService.class);
                     com.project.platehop.service.MenuService ms = ctx.getBean(com.project.platehop.service.MenuService.class);
                     restaurant = rs.getRestaurantById(rId);
-                    menuList = ms.getMenusByRestaurantId(rId);
+                    menuList = ms.getMenusByRestaurant(rId);
                 }
             } catch (Exception ignored) {}
         }

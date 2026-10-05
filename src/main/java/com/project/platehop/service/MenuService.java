@@ -24,6 +24,10 @@ public class MenuService {
         return menuRepository.findByRestaurantId(restaurantId);
     }
 
+    public List<Menu> getMenusByRestaurantId(int restaurantId) {
+        return getMenusByRestaurant(restaurantId);
+    }
+
     public List<Menu> getAvailableMenusByRestaurant(int restaurantId) {
         return menuRepository.findByRestaurantIdAndIsAvailable(restaurantId, 1);
     }
