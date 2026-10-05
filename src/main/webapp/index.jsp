@@ -9,6 +9,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Platehop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <!-- Google Fonts: Poppins & Anton -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -1225,7 +1230,7 @@
 
     <!-- Background Video (Half-Height Hero Only) -->
     <div class="hero-video-wrap">
-        <video class="hero-video" autoplay loop muted playsinline>
+        <video class="hero-video" autoplay loop muted playsinline preload="metadata">
             <source src="images/istockphoto-606042756-640_adpp_is.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
@@ -1547,58 +1552,58 @@
 
         <div class="restaurants-compact-grid">
             <!-- Rest 1 -->
-            <a href="Menu?restaurantId=2" class="rest-compact-card">
+            <a href="Menu?restaurantId=1" class="rest-compact-card">
                 <div class="rest-thumb-wrap">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=300&q=80" alt="Pizza Bella">
-                    <div class="rest-badge-logo" style="background:#e02020;">P</div>
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80" alt="The Crimson Canvas" loading="lazy" decoding="async">
+                    <div class="rest-badge-logo" style="background:#e02020;">C</div>
                 </div>
                 <div class="rest-compact-info">
-                    <h4 class="rest-compact-name">Pizza Bella</h4>
-                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.6</div>
-                    <div class="rest-compact-cuisine">Italian • Pizzas & Pasta</div>
-                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 30 min</div>
+                    <h4 class="rest-compact-name">The Crimson Canvas</h4>
+                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.8</div>
+                    <div class="rest-compact-cuisine">Italian • Pizza & Pasta</div>
+                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 35 min</div>
                 </div>
             </a>
 
             <!-- Rest 2 -->
-            <a href="Menu?restaurantId=3" class="rest-compact-card">
+            <a href="Menu?restaurantId=2" class="rest-compact-card">
                 <div class="rest-thumb-wrap">
-                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80" alt="Burger Bistro">
-                    <div class="rest-badge-logo" style="background:#f39c12;"><i class="fa-solid fa-burger" style="font-size:0.6rem;"></i></div>
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=300&q=80" alt="Sapphire Sushi" loading="lazy" decoding="async">
+                    <div class="rest-badge-logo" style="background:#2980b9;"><i class="fa-solid fa-fish" style="font-size:0.65rem;"></i></div>
                 </div>
                 <div class="rest-compact-info">
-                    <h4 class="rest-compact-name">Burger Bistro</h4>
-                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.7</div>
-                    <div class="rest-compact-cuisine">American • Burgers & Shakes</div>
-                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 20 min</div>
-                </div>
-            </a>
-
-            <!-- Rest 3 -->
-            <a href="Menu?restaurantId=1" class="rest-compact-card">
-                <div class="rest-thumb-wrap">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80" alt="Spice Symphony">
-                    <div class="rest-badge-logo" style="background:#c0392b;"><i class="fa-solid fa-pepper-hot" style="font-size:0.6rem;"></i></div>
-                </div>
-                <div class="rest-compact-info">
-                    <h4 class="rest-compact-name">Spice Symphony</h4>
-                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.8</div>
-                    <div class="rest-compact-cuisine">North Indian • Mughlai</div>
+                    <h4 class="rest-compact-name">Sapphire Sushi</h4>
+                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.9</div>
+                    <div class="rest-compact-cuisine">Japanese • Sushi & Rolls</div>
                     <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 25 min</div>
                 </div>
             </a>
 
-            <!-- Rest 4 -->
+            <!-- Rest 3 -->
             <a href="Menu?restaurantId=4" class="rest-compact-card">
                 <div class="rest-thumb-wrap">
-                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=300&q=80" alt="Tokyo Bites">
-                    <div class="rest-badge-logo" style="background:#27ae60;"><i class="fa-solid fa-bowl-rice" style="font-size:0.6rem;"></i></div>
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=300&q=80" alt="Golden Grill" loading="lazy" decoding="async">
+                    <div class="rest-badge-logo" style="background:#f39c12;"><i class="fa-solid fa-burger" style="font-size:0.6rem;"></i></div>
                 </div>
                 <div class="rest-compact-info">
-                    <h4 class="rest-compact-name">Tokyo Bites</h4>
-                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.9</div>
-                    <div class="rest-compact-cuisine">Japanese • Sushi & Asian</div>
-                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 35 min</div>
+                    <h4 class="rest-compact-name">Golden Grill</h4>
+                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.5</div>
+                    <div class="rest-compact-cuisine">American • Burgers & Steaks</div>
+                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 30 min</div>
+                </div>
+            </a>
+
+            <!-- Rest 4 -->
+            <a href="Menu?restaurantId=5" class="rest-compact-card">
+                <div class="rest-thumb-wrap">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=300&q=80" alt="Ruby Tacos" loading="lazy" decoding="async">
+                    <div class="rest-badge-logo" style="background:#c0392b;"><i class="fa-solid fa-pepper-hot" style="font-size:0.6rem;"></i></div>
+                </div>
+                <div class="rest-compact-info">
+                    <h4 class="rest-compact-name">Ruby Tacos</h4>
+                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.7</div>
+                    <div class="rest-compact-cuisine">Mexican • Tacos & Burritos</div>
+                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 25 min</div>
                 </div>
             </a>
         </div>

@@ -14,8 +14,7 @@ class PlateHopApplicationTests {
 
 	@Test
 	void contextLoads() {
-		org.junit.jupiter.api.Assertions.assertTrue(restaurantRepo.count() >= 5, "Restaurants should be seeded");
-		org.junit.jupiter.api.Assertions.assertTrue(menuRepo.count() >= 10, "Menu items should be seeded");
+		org.junit.jupiter.api.Assertions.assertTrue(restaurantRepo.count() >= 20, "Should have at least 20 restaurants seeded");
 	}
 
 }

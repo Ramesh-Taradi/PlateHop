@@ -59,92 +59,64 @@ public class DataInitializer implements CommandLineRunner {
             return;
         }
 
-        // Restaurant 1: Spice Symphony
-        Restaurant r1 = new Restaurant();
-        r1.setName("Spice Symphony");
-        r1.setCuisineType("North Indian, Mughlai");
-        r1.setDeliveryTime(25);
-        r1.setAddress("MG Road, Bangalore");
-        r1.setRating(4.8);
-        r1.setIsActive(1);
-        r1.setImagePath("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80");
-        r1 = restaurantRepo.save(r1);
+        Object[][] rawRestaurants = new Object[][] {
+            {"The Crimson Canvas", "Italian", 35, "1 Main Street", 4.8, "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"},
+            {"Sapphire Sushi", "Japanese", 25, "2 Main Street", 4.9, "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80"},
+            {"Emerald Eatery", "Healthy", 20, "3 Main Street", 4.6, "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80"},
+            {"Golden Grill", "American", 30, "4 Main Street", 4.5, "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"},
+            {"Ruby Tacos", "Mexican", 25, "5 Main Street", 4.7, "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80"},
+            {"Amethyst Asian", "Chinese", 40, "6 Main Street", 4.4, "https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=800&q=80"},
+            {"Topaz Thai", "Thai", 35, "7 Main Street", 4.8, "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=800&q=80"},
+            {"Pearl Pizzeria", "Italian", 30, "8 Main Street", 4.3, "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80"},
+            {"Onyx Oven", "Indian", 45, "9 Main Street", 4.9, "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=800&q=80"},
+            {"Coral Cafe", "Cafe", 15, "10 Main Street", 4.5, "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?auto=format&fit=crop&w=800&q=80"},
+            {"Quartz Quesadillas", "Mexican", 20, "11 Main Street", 4.6, "https://images.unsplash.com/photo-1502301103665-0b95cc738daf?auto=format&fit=crop&w=800&q=80"},
+            {"Jade Junction", "Asian Fusion", 35, "12 Main Street", 4.7, "https://images.unsplash.com/photo-1514361892635-6b07e31e75f3?auto=format&fit=crop&w=800&q=80"},
+            {"Opal Ocean Seafood", "Seafood", 50, "13 Main Street", 4.8, "https://images.unsplash.com/photo-1466978913421-bac2e59216e2?auto=format&fit=crop&w=800&q=80"},
+            {"Amber Burgers", "American", 25, "14 Main Street", 4.5, "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&q=80"},
+            {"Bronze Bakery", "Bakery", 15, "15 Main Street", 4.9, "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80"},
+            {"Cobalt Curries", "Indian", 40, "16 Main Street", 4.7, "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=800&q=80"},
+            {"Ivory Ice Cream", "Dessert", 10, "17 Main Street", 4.8, "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"},
+            {"Platinum Pasta", "Italian", 35, "18 Main Street", 4.6, "https://images.unsplash.com/photo-1563514258169-2f5f14e5bb00?auto=format&fit=crop&w=800&q=80"},
+            {"Obsidian BBQ", "BBQ", 45, "19 Main Street", 4.7, "https://images.unsplash.com/photo-1576867757603-05b134ebc379?auto=format&fit=crop&w=800&q=80"},
+            {"Crystal Crepes", "French", 20, "20 Main Street", 4.8, "https://images.unsplash.com/photo-1515669097368-22e68427d265?auto=format&fit=crop&w=800&q=80"}
+        };
 
-        addMenuItem(r1.getRestaurantId(), "Butter Chicken", "Tender chicken simmered in a rich tomato and butter gravy.", 320.0, "Mains", "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r1.getRestaurantId(), "Paneer Tikka", "Char-grilled cottage cheese cubes marinated in fragrant tandoori spices.", 240.0, "Starters", "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r1.getRestaurantId(), "Garlic Naan", "Freshly baked clay-oven leavened bread brushed with garlic butter.", 60.0, "Sides", "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r1.getRestaurantId(), "Gulab Jamun", "Soft warm dumplings soaked in cardamom saffron syrup.", 90.0, "Desserts", "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r1.getRestaurantId(), "Mango Lassi", "Traditional creamy yogurt drink blended with ripe Alphonso mangoes.", 110.0, "Beverages", "https://images.unsplash.com/photo-1525385133512-2f3bdd039054?auto=format&fit=crop&w=500&q=80");
+        Object[][] rawMenus = new Object[][] {
+            {"Classic Margherita", "Authentic tomato base, buffalo mozzarella, fresh basil, and extra virgin olive oil.", 12.99, "Mains", "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=500&q=80"},
+            {"Spicy Tuna Roll", "Fresh tuna, spicy sriracha mayo, cucumber, wrapped in seasoned seaweed sushi rice.", 14.50, "Mains", "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80"},
+            {"Avocado Salad", "Hass avocado, baby greens, cherry tomatoes, cucumbers, citrus vinaigrette.", 9.99, "Starters", "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80"},
+            {"Double Cheeseburger", "Two flame-grilled beef patties, cheddar cheese, crisp lettuce, secret sauce, brioche bun.", 13.50, "Mains", "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80"},
+            {"Chicken Tikka Masala", "Charcoal-grilled spiced chicken chunks simmered in a creamy aromatic tomato sauce.", 16.99, "Mains", "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=500&q=80"},
+            {"Beef Tacos", "Three warm corn tortillas stuffed with seasoned shredded beef, pico de gallo, and cotija.", 11.99, "Mains", "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=500&q=80"},
+            {"Pad Thai", "Stir-fried rice noodles with tamarind sauce, tofu, eggs, crushed peanuts, and lime.", 14.00, "Mains", "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=500&q=80"},
+            {"Chocolate Lava Cake", "Warm decadent dark chocolate cake with a rich molten chocolate fudge center.", 7.99, "Dessert", "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&q=80"},
+            {"Garlic Bread", "Artisan baguette toasted with roasted garlic, aromatic herbs, and melted mozzarella.", 4.99, "Starters", "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&w=500&q=80"},
+            {"Strawberry Cheesecake", "Classic New York-style baked cheesecake topped with fresh strawberry compote.", 6.50, "Dessert", "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=500&q=80"}
+        };
 
-        // Restaurant 2: Pizza Bella
-        Restaurant r2 = new Restaurant();
-        r2.setName("Pizza Bella");
-        r2.setCuisineType("Italian, Pizzas, Pasta");
-        r2.setDeliveryTime(30);
-        r2.setAddress("Indiranagar, Bangalore");
-        r2.setRating(4.6);
-        r2.setIsActive(1);
-        r2.setImagePath("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80");
-        r2 = restaurantRepo.save(r2);
+        for (Object[] rData : rawRestaurants) {
+            Restaurant r = new Restaurant();
+            r.setName((String) rData[0]);
+            r.setCuisineType((String) rData[1]);
+            r.setDeliveryTime((Integer) rData[2]);
+            r.setAddress((String) rData[3]);
+            r.setRating((Double) rData[4]);
+            r.setIsActive(1);
+            r.setImagePath((String) rData[5]);
+            r = restaurantRepo.save(r);
 
-        addMenuItem(r2.getRestaurantId(), "Margherita Gourmet", "San Marzano tomatoes, fresh buffalo mozzarella, and fragrant basil.", 350.0, "Mains", "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r2.getRestaurantId(), "Truffle Mushroom Pasta", "Fettuccine tossed in a wild mushroom creamy truffle emulsion.", 380.0, "Mains", "https://images.unsplash.com/photo-1621996346565-e3d5d6281724?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r2.getRestaurantId(), "Bruschetta Trio", "Crispy artisan sourdough topped with vine tomatoes, basil and olive oil.", 190.0, "Starters", "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r2.getRestaurantId(), "Classic Tiramisu", "Espresso-soaked ladyfingers layered with whipped mascarpone cream.", 220.0, "Desserts", "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=500&q=80");
-
-        // Restaurant 3: Burger Bistro
-        Restaurant r3 = new Restaurant();
-        r3.setName("Burger Bistro");
-        r3.setCuisineType("American, Burgers, Shakes");
-        r3.setDeliveryTime(20);
-        r3.setAddress("Koramangala, Bangalore");
-        r3.setRating(4.7);
-        r3.setIsActive(1);
-        r3.setImagePath("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80");
-        r3 = restaurantRepo.save(r3);
-
-        addMenuItem(r3.getRestaurantId(), "The Signature Smash Burger", "Double smashed beef/chicken patty, aged cheddar, caramelized onions, house sauce.", 280.0, "Mains", "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r3.getRestaurantId(), "Loaded Crispy Fries", "Skin-on fries tossed in smoked paprika, topped with cheese sauce and jalapenos.", 160.0, "Sides", "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r3.getRestaurantId(), "Belgian Chocolate Shake", "Thick chilled shake blended with dark chocolate and ice cream.", 150.0, "Beverages", "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80");
-
-        // Restaurant 4: Tokyo Bites
-        Restaurant r4 = new Restaurant();
-        r4.setName("Tokyo Bites");
-        r4.setCuisineType("Japanese, Sushi, Asian");
-        r4.setDeliveryTime(35);
-        r4.setAddress("Whitefield, Bangalore");
-        r4.setRating(4.9);
-        r4.setIsActive(1);
-        r4.setImagePath("https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80");
-        r4 = restaurantRepo.save(r4);
-
-        addMenuItem(r4.getRestaurantId(), "Salmon Nigiri Platter", "Fresh salmon over seasoned sushi rice with wasabi and pickled ginger.", 450.0, "Mains", "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r4.getRestaurantId(), "Crispy Prawn Tempura", "Lightly battered golden prawns served with tentsuyu dipping sauce.", 320.0, "Starters", "https://images.unsplash.com/photo-1615361200141-f45040f367be?auto=format&fit=crop&w=500&q=80");
-
-        // Restaurant 5: Sweet Escapes
-        Restaurant r5 = new Restaurant();
-        r5.setName("Sweet Escapes");
-        r5.setCuisineType("Bakery, Desserts, Cafe");
-        r5.setDeliveryTime(18);
-        r5.setAddress("Jayanagar, Bangalore");
-        r5.setRating(4.8);
-        r5.setIsActive(1);
-        r5.setImagePath("https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80");
-        r5 = restaurantRepo.save(r5);
-
-        addMenuItem(r5.getRestaurantId(), "Molten Choco Lava Cake", "Warm chocolate cake with an oozing liquid chocolate center.", 180.0, "Desserts", "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&q=80");
-        addMenuItem(r5.getRestaurantId(), "Cold Brew Hazelnut", "Slow-steeped artisan coffee poured over hazelnut cream and ice.", 140.0, "Beverages", "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=500&q=80");
-    }
-
-    private void addMenuItem(int restId, String name, String desc, double price, String category, String img) {
-        Menu m = new Menu();
-        m.setRestaurantId(restId);
-        m.setItemName(name);
-        m.setDescription(desc);
-        m.setPrice(price);
-        m.setCategory(category);
-        m.setIsAvailable(1);
-        m.setImagePath(img);
-        menuRepo.save(m);
+            for (Object[] mData : rawMenus) {
+                Menu m = new Menu();
+                m.setRestaurantId(r.getRestaurantId());
+                m.setItemName((String) mData[0]);
+                m.setDescription((String) mData[1]);
+                m.setPrice((Double) mData[2]);
+                m.setCategory((String) mData[3]);
+                m.setIsAvailable(1);
+                m.setImagePath((String) mData[4]);
+                menuRepo.save(m);
+            }
+        }
     }
 }
