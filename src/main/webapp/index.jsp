@@ -1019,7 +1019,144 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* ── MOBILE MENU BUTTON & DRAWER ── */
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 1.15rem;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s;
+        }
+        .mobile-menu-btn:hover {
+            background: rgba(255, 94, 0, 0.2);
+            color: var(--orange);
+            border-color: var(--orange);
+        }
+        
+        .mobile-nav-drawer {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 290px;
+            height: 100vh;
+            background: #111116;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10000;
+            padding: 1.5rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: -10px 0 35px rgba(0, 0, 0, 0.85);
+            overflow-y: auto;
+        }
+        .mobile-nav-drawer.open {
+            right: 0;
+        }
+        .mobile-nav-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .mobile-nav-title {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+        .mobile-nav-title span { color: var(--orange); }
+        .mobile-close-btn {
+            background: transparent;
+            border: none;
+            color: #aaa;
+            font-size: 1.4rem;
+            cursor: pointer;
+            padding: 4px;
+            line-height: 1;
+        }
+        .mobile-close-btn:hover { color: #fff; }
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .mobile-link {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 1rem;
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+        .mobile-link i {
+            width: 22px;
+            color: var(--orange);
+            font-size: 1.05rem;
+        }
+        .mobile-link:hover, .mobile-link.active-link {
+            background: rgba(255, 94, 0, 0.12);
+            color: #fff;
+        }
+        .mobile-auth-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .btn-login-mob {
+            display: block;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 50px;
+            border: 1px solid var(--orange);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .btn-signup-mob {
+            display: block;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 50px;
+            background: var(--orange);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .mobile-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            z-index: 9999;
+        }
+        .mobile-backdrop.open {
+            display: block;
+        }
+
+        /* ── RESPONSIVE MEDIA QUERIES ── */
         @media (max-width: 1100px) {
+            .navbar { padding: 1.2rem 2rem; }
+            .hero { padding: 0 2rem; }
+            .hero-title { font-size: 4.5rem; }
             .dishes-grid { grid-template-columns: repeat(2, 1fr); }
             .restaurants-compact-grid { grid-template-columns: repeat(2, 1fr); }
             .promos-grid { grid-template-columns: 1fr; }
@@ -1027,15 +1164,60 @@
             .step-arrow { transform: rotate(90deg); padding: 0.5rem 0; }
             .reviews-grid { grid-template-columns: 1fr; }
             .footer-top { grid-template-columns: 1fr 1fr; }
+            .categories-bar { overflow-x: auto; gap: 2rem; justify-content: flex-start; margin: 2rem 2rem 1.5rem; }
+            .features-row { flex-wrap: wrap; gap: 2rem; justify-content: center; padding: 0.5rem 2rem 2rem; }
+            .feat-divider { display: none; }
+        }
+        @media (max-width: 900px) {
+            .navbar { padding: 1rem 1.5rem; }
+            .nav-links { display: none; }
+            .search-bar { display: none; }
+            .mobile-menu-btn { display: flex; }
+            .nav-actions { gap: 0.8rem; }
         }
         @media (max-width: 650px) {
-            .home-section { padding: 1.5rem 1rem; }
-            .categories-bar, .features-row { width: calc(100% - 2rem); margin-left: auto; margin-right: auto; }
-            .dishes-grid { grid-template-columns: 1fr; }
-            .restaurants-compact-grid { grid-template-columns: 1fr; }
-            .footer-top { grid-template-columns: 1fr; }
+            html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
+            .navbar { padding: 0.85rem 1rem; width: 100%; }
+            .logo { font-size: 1.35rem; }
+            .logo svg { width: 28px; height: 36px; }
+            .btn-login, .btn-signup { display: none; }
+            
+            .hero { padding: 0 1rem; margin-top: 1.5rem; width: 100%; max-width: 100%; }
+            .hero-title { font-size: clamp(2.2rem, 9vw, 3.2rem); margin-bottom: 0.8rem; line-height: 1.1; }
+            .hero-desc { font-size: 0.92rem; margin-bottom: 1.5rem; }
+            .hero-btns { flex-direction: column; width: 100%; gap: 0.75rem; }
+            .btn-primary, .btn-outline { width: 100%; justify-content: center; padding: 0.85rem 1.2rem; }
+            
+            .categories-bar { width: calc(100% - 1.6rem); margin: 1.5rem auto 1rem; padding: 1rem 0.8rem; gap: 1.2rem; border-radius: 16px; }
+            .cat-img-wrap { width: 54px; height: 54px; }
+            .cat-name { font-size: 0.8rem; }
+            .cat-count { font-size: 0.68rem; }
+            .view-all { width: 70px; height: 70px; min-width: 70px; border-radius: 14px; }
+            .view-all i { font-size: 1.25rem; }
+            
+            .features-row { width: calc(100% - 1.6rem); margin: 0 auto 1.5rem; padding: 0.8rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+            .feat-icon { width: 36px; height: 36px; min-width: 36px; font-size: 0.9rem; }
+            .feat-text strong { font-size: 0.82rem; }
+            .feat-text span { font-size: 0.68rem; }
+            
+            .home-section { padding: 1.5rem 1rem; width: 100%; max-width: 100%; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 0.4rem; margin-bottom: 1rem; }
+            .section-title { font-size: 1.45rem; }
+            .view-all-link { font-size: 0.82rem; }
+            
+            .dishes-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .restaurants-compact-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .promos-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .promo-card { padding: 1.8rem 1.2rem; }
+            .promo-title { font-size: 1.4rem; }
+            .how-it-works-grid { flex-direction: column; gap: 1.2rem; }
+            .step-card { width: 100%; max-width: 100%; }
+            .step-arrow { transform: rotate(90deg); padding: 0.2rem 0; }
+            .reviews-grid { grid-template-columns: 1fr; gap: 1rem; }
+            
+            .footer-top { grid-template-columns: 1fr; gap: 2rem; }
             .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
-            .site-footer { padding: 2.5rem 1.2rem 1.5rem; }
+            .site-footer { padding: 2.5rem 1rem 1.5rem; }
         }
     </style>
 </head>
@@ -1064,10 +1246,10 @@
         <div class="nav-links">
             <a href="index.jsp" class="active">Home</a>
             <a href="restaurants">Menu</a>
-            <a href="#">Categories</a>
-            <a href="#">Offers</a>
-            <a href="#">Reviews</a>
-            <a href="#">Contact</a>
+            <a href="restaurants">Categories</a>
+            <a href="#special-offers">Offers</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#site-footer">Contact</a>
         </div>
 
         <div class="nav-actions">
@@ -1091,8 +1273,44 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                 </a>
             <% } %>
+
+            <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-title">Plate<span>Hop</span></div>
+            <button type="button" class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.jsp" class="mobile-link active-link"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="restaurants" class="mobile-link"><i class="fa-solid fa-utensils"></i> Restaurants & Menu</a>
+            <a href="restaurants?category=pizza" class="mobile-link"><i class="fa-solid fa-pizza-slice"></i> Pizza</a>
+            <a href="restaurants?category=burger" class="mobile-link"><i class="fa-solid fa-burger"></i> Burgers</a>
+            <a href="restaurants?category=pasta" class="mobile-link"><i class="fa-solid fa-bowl-food"></i> Pasta</a>
+            <a href="#popular-dishes" class="mobile-link" onclick="closeMobileNav()"><i class="fa-solid fa-fire"></i> Most Loved Dishes</a>
+            <a href="#special-offers" class="mobile-link" onclick="closeMobileNav()"><i class="fa-solid fa-tags"></i> Special Offers</a>
+            <a href="#reviews" class="mobile-link" onclick="closeMobileNav()"><i class="fa-solid fa-star"></i> Customer Reviews</a>
+            <a href="cart.jsp" class="mobile-link"><i class="fa-solid fa-cart-shopping"></i> My Cart</a>
+            <% if(loggedInUser == null){ %>
+                <div class="mobile-auth-btns">
+                    <a href="login.jsp" class="btn-login-mob">Login</a>
+                    <a href="register.jsp" class="btn-signup-mob">Sign Up</a>
+                </div>
+            <% } else { %>
+                <a href="profile.jsp" class="mobile-link"><i class="fa-solid fa-user"></i> My Profile (<%= loggedInUser.getName() %>)</a>
+                <a href="orders.jsp" class="mobile-link"><i class="fa-solid fa-clock-rotate-left"></i> My Orders</a>
+                <a href="logout" class="mobile-link" style="color:#ff5555;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            <% } %>
+        </div>
+    </div>
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
 
     <!-- HERO -->
     <section class="hero">
@@ -1617,6 +1835,28 @@
                 }, 2800);
             }
         }
+
+        /* Mobile Drawer Logic */
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+        const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+        const mobileBackdrop = document.getElementById('mobileBackdrop');
+
+        function openMobileNav() {
+            if (mobileNavDrawer) mobileNavDrawer.classList.add('open');
+            if (mobileBackdrop) mobileBackdrop.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileNav() {
+            if (mobileNavDrawer) mobileNavDrawer.classList.remove('open');
+            if (mobileBackdrop) mobileBackdrop.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileNav);
+        if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileNav);
+        if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMobileNav);
     </script>
 </body>
 </html>

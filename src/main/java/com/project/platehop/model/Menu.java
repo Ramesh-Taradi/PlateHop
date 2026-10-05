@@ -30,7 +30,7 @@ public class Menu implements Serializable {
     @Column(name = "ItemName", nullable = false)
     private String itemName;
 
-    @Column(name = "Description", columnDefinition = "TEXT")
+    @Column(name = "Description", length = 1000)
     private String description;
 
     @Column(name = "Price", nullable = false)

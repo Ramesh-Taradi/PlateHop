@@ -28,10 +28,15 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) {
         try {
-            seedUsers();
             seedRestaurantsAndMenus();
         } catch (Exception e) {
-            System.err.println("DataInitializer error (safe to ignore if data exists): " + e.getMessage());
+            System.err.println("Error seeding restaurants: " + e.getMessage());
+            e.printStackTrace();
+        }
+        try {
+            seedUsers();
+        } catch (Exception e) {
+            System.err.println("Error seeding users: " + e.getMessage());
         }
     }
 

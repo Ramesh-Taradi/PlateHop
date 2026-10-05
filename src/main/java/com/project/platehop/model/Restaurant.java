@@ -28,7 +28,7 @@ public class Restaurant implements Serializable {
     @Column(name = "DeliveryTime")
     private Integer deliveryTime = 30;
 
-    @Column(name = "Address", columnDefinition = "TEXT")
+    @Column(name = "Address", length = 1000)
     private String address;
 
     @Column(name = "AdminUserID")

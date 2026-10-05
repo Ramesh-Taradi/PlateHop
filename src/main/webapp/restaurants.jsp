@@ -344,15 +344,17 @@
             .footer-top { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
-            .navbar { padding: 0.85rem 1.25rem; }
-            .page-header { padding: 7.5rem 1.25rem 2.5rem; }
-            .grid-section { padding: 2rem 1.25rem; }
-            .rest-grid { grid-template-columns: 1fr; gap: 1.4rem; }
-            .nav-links a, .nav-actions a:not(.cart-icon):not(.profile-menu) { display: none; }
-            .search-wrap { margin-top: 1.6rem; }
-            .footer-top { grid-template-columns: 1fr; }
+            html, body { overflow-x: hidden; width: 100%; max-width: 100vw; }
+            .navbar { padding: 0.85rem 1rem; width: 100%; }
+            .page-header { padding: 6.5rem 1rem 2rem; }
+            .grid-section { padding: 1.5rem 1rem; }
+            .rest-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+            .nav-links a.active, .nav-actions a:not(.cart-icon):not(.profile-menu) { display: none; }
+            .nav-links a { padding: 0.4rem 0.85rem; font-size: 0.84rem; background: rgba(255,255,255,0.06); }
+            .search-wrap { margin-top: 1.4rem; }
+            .footer-top { grid-template-columns: 1fr; gap: 1.8rem; }
             .footer-bottom { flex-direction: column; gap: 0.8rem; text-align: center; }
-            .site-footer { padding: 2.5rem 1.25rem 1.5rem; }
+            .site-footer { padding: 2.5rem 1rem 1.5rem; }
         }
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; }
