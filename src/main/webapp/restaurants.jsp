@@ -5,6 +5,16 @@
 <%
     User loggedInUser = (User) session.getAttribute("loggedInUser");
     List<Restaurant> allRestaurants = (List<Restaurant>) request.getAttribute("allRestaurants");
+    if (allRestaurants == null || allRestaurants.isEmpty()) {
+        try {
+            org.springframework.web.context.WebApplicationContext ctx = 
+                org.springframework.web.context.support.WebApplicationContextUtils.getWebApplicationContext(application);
+            if (ctx != null) {
+                com.project.platehop.service.RestaurantService rs = ctx.getBean(com.project.platehop.service.RestaurantService.class);
+                allRestaurants = rs.getActiveRestaurants();
+            }
+        } catch (Exception ignored) {}
+    }
 %>
 <!DOCTYPE html>
 <html lang="en"> 

@@ -8,6 +8,22 @@
     List<Menu> menuList = (List<Menu>) request.getAttribute("menuList");
     Restaurant restaurant = (Restaurant) request.getAttribute("restaurant");
     if (restaurant == null) {
+        String restIdParam = request.getParameter("restaurantId");
+        if (restIdParam != null && !restIdParam.trim().isEmpty()) {
+            try {
+                int rId = Integer.parseInt(restIdParam.trim());
+                org.springframework.web.context.WebApplicationContext ctx = 
+                    org.springframework.web.context.support.WebApplicationContextUtils.getWebApplicationContext(application);
+                if (ctx != null) {
+                    com.project.platehop.service.RestaurantService rs = ctx.getBean(com.project.platehop.service.RestaurantService.class);
+                    com.project.platehop.service.MenuService ms = ctx.getBean(com.project.platehop.service.MenuService.class);
+                    restaurant = rs.getRestaurantById(rId);
+                    menuList = ms.getMenusByRestaurantId(rId);
+                }
+            } catch (Exception ignored) {}
+        }
+    }
+    if (restaurant == null) {
         response.sendRedirect("restaurants");
         return;
     }

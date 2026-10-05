@@ -1547,58 +1547,58 @@
 
         <div class="restaurants-compact-grid">
             <!-- Rest 1 -->
-            <a href="Menu?restaurantId=1" class="rest-compact-card">
+            <a href="Menu?restaurantId=2" class="rest-compact-card">
                 <div class="rest-thumb-wrap">
-                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80" alt="Pizza Palace">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=300&q=80" alt="Pizza Bella">
                     <div class="rest-badge-logo" style="background:#e02020;">P</div>
                 </div>
                 <div class="rest-compact-info">
-                    <h4 class="rest-compact-name">Pizza Palace</h4>
-                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.8</div>
-                    <div class="rest-compact-cuisine">Italian • Pizza</div>
-                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 25-30 min</div>
+                    <h4 class="rest-compact-name">Pizza Bella</h4>
+                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.6</div>
+                    <div class="rest-compact-cuisine">Italian • Pizzas & Pasta</div>
+                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 30 min</div>
                 </div>
             </a>
 
             <!-- Rest 2 -->
-            <a href="Menu?restaurantId=4" class="rest-compact-card">
+            <a href="Menu?restaurantId=3" class="rest-compact-card">
                 <div class="rest-thumb-wrap">
-                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=300&q=80" alt="Burger Hub">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80" alt="Burger Bistro">
                     <div class="rest-badge-logo" style="background:#f39c12;"><i class="fa-solid fa-burger" style="font-size:0.6rem;"></i></div>
                 </div>
                 <div class="rest-compact-info">
-                    <h4 class="rest-compact-name">Burger Hub</h4>
-                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.6</div>
-                    <div class="rest-compact-cuisine">Burgers • Fast Food</div>
-                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 20-25 min</div>
+                    <h4 class="rest-compact-name">Burger Bistro</h4>
+                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.7</div>
+                    <div class="rest-compact-cuisine">American • Burgers & Shakes</div>
+                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 20 min</div>
                 </div>
             </a>
 
             <!-- Rest 3 -->
-            <a href="Menu?restaurantId=9" class="rest-compact-card">
+            <a href="Menu?restaurantId=1" class="rest-compact-card">
                 <div class="rest-thumb-wrap">
-                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=300&q=80" alt="Spice Villa">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80" alt="Spice Symphony">
                     <div class="rest-badge-logo" style="background:#c0392b;"><i class="fa-solid fa-pepper-hot" style="font-size:0.6rem;"></i></div>
                 </div>
                 <div class="rest-compact-info">
-                    <h4 class="rest-compact-name">Spice Villa</h4>
-                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.7</div>
-                    <div class="rest-compact-cuisine">Indian • Biryani</div>
-                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 25-35 min</div>
+                    <h4 class="rest-compact-name">Spice Symphony</h4>
+                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.8</div>
+                    <div class="rest-compact-cuisine">North Indian • Mughlai</div>
+                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 25 min</div>
                 </div>
             </a>
 
             <!-- Rest 4 -->
-            <a href="Menu?restaurantId=6" class="rest-compact-card">
+            <a href="Menu?restaurantId=4" class="rest-compact-card">
                 <div class="rest-thumb-wrap">
-                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=300&q=80" alt="Noodle House">
+                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=300&q=80" alt="Tokyo Bites">
                     <div class="rest-badge-logo" style="background:#27ae60;"><i class="fa-solid fa-bowl-rice" style="font-size:0.6rem;"></i></div>
                 </div>
                 <div class="rest-compact-info">
-                    <h4 class="rest-compact-name">Noodle House</h4>
-                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.5</div>
-                    <div class="rest-compact-cuisine">Chinese • Noodles</div>
-                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 20-30 min</div>
+                    <h4 class="rest-compact-name">Tokyo Bites</h4>
+                    <div class="rest-compact-rating"><i class="fa-solid fa-star"></i> 4.9</div>
+                    <div class="rest-compact-cuisine">Japanese • Sushi & Asian</div>
+                    <div class="rest-compact-time"><i class="fa-regular fa-clock"></i> 35 min</div>
                 </div>
             </a>
         </div>
